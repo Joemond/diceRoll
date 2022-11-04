@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+    <script>
+        function initialize() {
+            diceRollOutput = document.getElementById("rndnum");
+            diceRollOutput1 = document.getElementById("rndnum1");
+            sum = document.getElementById("sum");
+            diceRoll();
+        }
+        function diceRoll() {
+        rndNumber = Math.floor(Math.random() * 6) + 1;
+        rndNumber1 = Math.floor(Math.random() * 6) + 1;
+        addNum = rndNumber + rndNumber1;
+        display();
+        }
+
+        function display() {
+            diceRollOutput.innerHTML = rndNumber;
+            diceRollOutput1.innerHTML = rndNumber1;
+            sum.innerHTML = addNum;
+        }
+
+        
+    </script>
+</head>
+<body onload = "initialize();">
+    The dice rolled <span id = "rndnum">0</span> and <span id = "rndnum1">0</span>. The combined total is <span id = "sum">0</span>.    
+<button onclick = "diceRoll();">
+    Dice
+</button>
+</body>
+</body>
+</html>
