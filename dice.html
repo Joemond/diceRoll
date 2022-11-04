@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style></style>
-    <script>
+    <script> 
         function initialize() {
             diceRollOutput = document.getElementById("rndnum");
             diceRollOutput1 = document.getElementById("rndnum1");
             sum = document.getElementById("sum");
             diceRoll();
-        }
+        } 
         function diceRoll() {
         rndNumber = Math.floor(Math.random() * 6) + 1;
         rndNumber1 = Math.floor(Math.random() * 6) + 1;
@@ -28,10 +28,11 @@
 
         
     </script>
-</head>
-<body onload = "initialize();">
+    <!--In script, diceRoll creates two random numbers between 1 and 6 named rndNumber and rndNumber1. addNum is then used to find the sum of the two numbers.-->
+</head> <!--Joemond Ma, Web Development 5E7, Pd 7-8.-->
+<body onload = "initialize();"> <!--This displays the numbers rolled and added-->
     The dice rolled <span id = "rndnum">0</span> and <span id = "rndnum1">0</span>. The combined total is <span id = "sum">0</span>.    
-<button onclick = "diceRoll();">
+<button onclick = "diceRoll();"> <!--This is the button that whenever clicked, does diceRoll and rolls the dice-->
     Dice
 </button>
 </body>
